@@ -10,7 +10,8 @@ const corsOptions = {
   };
 app.use(cors(
   {
-  origin: corsOptions,
+  // origin: corsOptions,
+    origin: "*",
   // origin: "http://192.168.1.3:5173",
   // origin: `${process.env.CORS_ORIGIN}`,
     // origin: ["http://localhost:5173", "https://employee-dashboard-ashen.vercel.app"],
