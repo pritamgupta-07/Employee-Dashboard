@@ -8,16 +8,17 @@ const app = express();
     // origin: process.env.CORS_ORIGIN.split(',').map(origin => origin.trim()),
     // Add other CORS options if needed (e.g., methods, headers)
   // };
-app.use(cors(
-  {
-  // origin: corsOptions,
-    origin: "*",
-  // origin: "http://192.168.1.3:5173",
-  // origin: `${process.env.CORS_ORIGIN}`,
-    // origin: ["http://localhost:5173", "https://employee-dashboard-ashen.vercel.app"],
-    credentials: true
-    }
-))
+// app.use(cors(
+//   // {
+//   // // origin: corsOptions,
+//   //   origin: "*",
+//   // // origin: "http://192.168.1.3:5173",
+//   // // origin: `${process.env.CORS_ORIGIN}`,
+//   //   // origin: ["http://localhost:5173", "https://employee-dashboard-ashen.vercel.app"],
+//   //   credentials: true
+//   //   }
+// ))
+app.use(cors())
 app.use(express.json({limit: "16kb"}))
 app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(express.static("public"))
