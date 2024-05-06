@@ -4,10 +4,10 @@ import cookieParser from "cookie-parser";
 
 const app = express();
 // const allowedOrigins = process.env.CORS_ORIGIN
-const corsOptions = {
-    origin: process.env.CORS_ORIGIN.split(',').map(origin => origin.trim()),
+// const corsOptions = {
+    // origin: process.env.CORS_ORIGIN.split(',').map(origin => origin.trim()),
     // Add other CORS options if needed (e.g., methods, headers)
-  };
+  // };
 app.use(cors(
   {
   // origin: corsOptions,
@@ -23,7 +23,7 @@ app.use(express.urlencoded({extended: true, limit: "16kb"}))
 app.use(express.static("public"))
 app.use(cookieParser())
 
-console.log(process.env.CORS_ORIGIN)
+// console.log(process.env.CORS_ORIGIN)
 // routes
 
 import adminRouter from "./routes/admin.routes.js";
