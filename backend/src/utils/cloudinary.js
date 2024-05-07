@@ -15,11 +15,11 @@ const uploadOnCloudinary = async (localFilePath) => {
             resource_type: "image"
         })
         // console.log("File uploaded", response.url);
-        fs.unlinkSync(process.cwd()+"/"+localFilePath)
-      console.log( fs.unlinkSync(process.cwd()+"/"+localFilePath))
+        // fs.unlinkSync(process.cwd()+"/"+localFilePath)
+      // console.log( fs.unlinkSync(process.cwd()+"/"+localFilePath))
         return response;
     } catch (error) {
-        fs.unlinkSync(process.cwd()+"/"+localFilePath)
+        // fs.unlinkSync(process.cwd()+"/"+localFilePath)
         return null;
     }
 }
