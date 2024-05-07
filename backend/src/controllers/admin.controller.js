@@ -77,7 +77,7 @@ const registerAdmin = asyncHandler(async (req, res) => {
       throw new ApiError(500, "Something went wrong while registering");
     }
 
-    return res
+     res
       .status(201)
       .json(new ApiResponse(200, createdAdmin, "Admin registered"));
   } catch (error) {
